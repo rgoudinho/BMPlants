@@ -10,4 +10,9 @@ Entrando com uma doença, ira ser feito uma lista de plantas que podem ser usada
 * Favoritar planta
 * listar plantas favoritadas
 
-
+#### Telas
+* Tela de pesquisa de plantas por doenças
+* Lista de plantas
+* Planta
+* Log-in
+* Cadastro
