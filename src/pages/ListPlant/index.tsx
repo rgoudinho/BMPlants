@@ -4,7 +4,9 @@ import React from "react";
 export default function ListPlant() {
   return (
     <View>
-      <Text></Text>
+      <Text>
+        
+      </Text>
     </View>
   );
 }

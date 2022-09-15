@@ -4,7 +4,9 @@ import React from "react";
 export default function Login() {
   return (
     <View>
-      <Text></Text>
+      <Text>
+        
+      </Text>
     </View>
   );
 }
