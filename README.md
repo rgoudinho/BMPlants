@@ -21,8 +21,8 @@ Entrando com uma doença, ira ser feito uma lista de plantas que podem ser usada
 * Log-in
 * Cadastro
 
-
 #### Cores usadas
 *  #00be01 (cor principal)
 *  #fbfbfb (cor secundaria)
 *  #01d66a (cor tercearia)
+*  #010101 (texto padrão)
