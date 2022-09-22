@@ -1,18 +1,18 @@
+
+
 import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 
-export default function Login() {
+import LoginComponent from "../../components/Login";
+
+export default function Login({navigation}) {
   return (
     <View>
-      <Text>
-        
-      </Text>
+      <LoginComponent navigation={navigation}/>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
+
 });

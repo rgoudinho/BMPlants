@@ -3,6 +3,7 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -43,8 +44,8 @@ function RoutesTab() {
       tabBarInactiveTintColor: 'gray',
     })}>
       <Tab.Screen name={ScreenNames.List} component={ListPlant} />
-      <Tab.Screen name={ScreenNames.Profile} component={Profile} />
       <Tab.Screen name={ScreenNames.Search} component={SearchPlantsDiseases} />
+      <Tab.Screen name={ScreenNames.Profile} component={Profile} />
     </Tab.Navigator>
   );
 }
