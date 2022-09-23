@@ -5,7 +5,7 @@ import Header from "./Header";
 import Form from "./Form";
 import { StatusBar } from "expo-status-bar";
 
-export default function Login({ navigation }) {
+export default function Login({ navigation }:any) {
   return (
     <View style={styles.container}>
       <Header style={styles.header}/>

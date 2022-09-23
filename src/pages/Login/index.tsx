@@ -5,7 +5,7 @@ import React from "react";
 
 import LoginComponent from "../../components/Login";
 
-export default function Login({navigation}) {
+export default function Login({navigation}:any) {
   return (
     <View>
       <LoginComponent navigation={navigation}/>

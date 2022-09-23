@@ -1,7 +1,7 @@
 import { View, Button, Text, StyleSheet, TextInput } from "react-native";
 import React from "react";
 
-export default function Form({ navigation }) {
+export default function Form({ navigation }:any) {
   const [tvEmail, octEmail] = React.useState("");
   const [tvPassword, octPassword] = React.useState("");
 

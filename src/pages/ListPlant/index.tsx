@@ -1,7 +1,7 @@
 import { View, Button, Text, StyleSheet } from "react-native";
 import React from "react";
 
-export default function ListPlant({navigation}) {
+export default function ListPlant({ navigation }: any) {
   const press = () => {
     navigation.navigate("Plant");
   };
@@ -9,7 +9,7 @@ export default function ListPlant({navigation}) {
   return (
     <View>
       <Text>
-      <Button title="press" onPress={press} />
+        <Button title="press" onPress={press} />
       </Text>
     </View>
   );

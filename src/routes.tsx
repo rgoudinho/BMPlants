@@ -29,7 +29,7 @@ function RoutesTab() {
   return (
     <Tab.Navigator screenOptions={({ route }) => ({
       tabBarIcon: ({ focused, color, size }) => {
-        let iconName;
+        let iconName : any;
 
         if (route.name === 'List') {
           iconName = focused ? 'clipboard-list' : 'clipboard-list-outline';
