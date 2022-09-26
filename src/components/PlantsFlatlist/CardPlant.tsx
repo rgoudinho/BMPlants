@@ -1,10 +1,13 @@
 import { View, Button, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
+import InterfacePlant from "../../services/data/InterfacePlant";
 
-import data_plant from "../../services/data/api_data_plant";
+interface CardPlantProps {
+  item: InterfacePlant;
+}
 
-export default function CardPlant({ item }: data_plant) {
-  const handleClickPlant = (item: data_plant) => {
+export default function CardPlant({ item }: CardPlantProps) {
+  const handleClickPlant = (item: InterfacePlant) => {
     console.log("Clicked on item " + item.id);
   };
 

@@ -1,11 +1,11 @@
 import { View, Button, Text, StyleSheet } from "react-native";
 import React from "react";
-import ListPlantComponent from "../../components/ListPlant";
+import PlantsFlatlist from "../../components/PlantsFlatlist";
 
-export default function ListPlant() {
+export default function PageListPlants() {
   return (
     <View style={styles.container}>
-      <ListPlantComponent />
+      <PlantsFlatlist />
     </View>
   );
 }

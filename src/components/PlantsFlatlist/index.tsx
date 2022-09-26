@@ -11,7 +11,7 @@ import React from "react";
 import CardPlant from "./CardPlant";
 import data_plant from "../../services/data/api_data_plant";
 
-export default function ListPlant() {
+export default function PlantsFlatlist() {
   return (
     <FlatList
       data={data_plant}
@@ -21,6 +21,4 @@ export default function ListPlant() {
   );
 }
 
-const styles = StyleSheet.create({
-
-});
+const styles = StyleSheet.create({});

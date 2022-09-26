@@ -7,7 +7,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import ListPlant from "./pages/ListPlant";
+import PageListPlants from "./pages/PageListPlants";
 import Profile from "./pages/Profile";
 import SearchPlantsDiseases from "./pages/SearchPlantsDiseases";
 import Plant from "./pages/Plant";
@@ -17,7 +17,7 @@ const Tab = createBottomTabNavigator();
 
 export enum ScreenNames {
   List = "List",
-  ListPlant = "ListPlant",
+  PageListPlants = "PageListPlants",
   Login = "Login",
   Register = "Register",
   RoutesTab = "RoutesTab",
@@ -33,7 +33,7 @@ function ListPlantStack() {
         headerShown: false,
       }}
     >
-      <Stack.Screen name={ScreenNames.List} component={ListPlant} />
+      <Stack.Screen name={ScreenNames.List} component={PageListPlants} />
       <Stack.Screen name={ScreenNames.Plant} component={Plant} />
     </Stack.Navigator>
   );
@@ -61,7 +61,10 @@ function RoutesTab() {
         tabBarInactiveTintColor: "gray",
       })}
     >
-      <Tab.Screen name={ScreenNames.ListPlant} component={ListPlantStack} />
+      <Tab.Screen
+        name={ScreenNames.PageListPlants}
+        component={ListPlantStack}
+      />
       <Tab.Screen name={ScreenNames.Search} component={SearchPlantsDiseases} />
       <Tab.Screen name={ScreenNames.Profile} component={Profile} />
     </Tab.Navigator>

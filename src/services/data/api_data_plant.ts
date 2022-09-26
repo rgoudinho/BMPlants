@@ -1,4 +1,6 @@
-const data_plant = [
+import InterfacePlant from "./InterfacePlant";
+
+const data_plant: Array<InterfacePlant> = [
   {
     id: 1,
     name: "Ortelã-pimenta",
