@@ -1,14 +1,17 @@
 import { View, Button, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import InterfacePlant from "../../services/data/InterfacePlant";
+import { useNavigation } from "@react-navigation/native";
+import ScreenNames from "../../routes/EnumScreenNames";
 
 interface CardPlantProps {
   item: InterfacePlant;
 }
 
 export default function CardPlant({ item }: CardPlantProps) {
+  const navigation = useNavigation();
   const handleClickPlant = (item: InterfacePlant) => {
-    console.log("Clicked on item " + item.id);
+    navigation.navigate(ScreenNames.Plant, { item });
   };
 
   return (

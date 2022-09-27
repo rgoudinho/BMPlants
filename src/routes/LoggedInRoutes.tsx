@@ -2,13 +2,13 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import ScreenNames from "./enumScreenNames";
+import ScreenNames from "./EnumScreenNames";
 
 //Pages
 import PageListPlants from "../pages/PageListPlants";
-import Plant from "../pages/Plant";
-import Profile from "../pages/Profile";
-import SearchPlantsDiseases from "../pages/SearchPlantsDiseases";
+import Plant from "../pages/PagePlant";
+import Profile from "../pages/PageProfile";
+import SearchPlantsDiseases from "../pages/PageSearchPlantsDiseases";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();

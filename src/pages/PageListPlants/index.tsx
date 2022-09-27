@@ -2,10 +2,10 @@ import { View, Button, Text, StyleSheet } from "react-native";
 import React from "react";
 import PlantsFlatlist from "../../components/PlantsFlatlist";
 
-export default function PageListPlants() {
+export default function PageListPlants({ navigation }: any) {
   return (
     <View style={styles.container}>
-      <PlantsFlatlist />
+      <PlantsFlatlist navigation={navigation} />
     </View>
   );
 }

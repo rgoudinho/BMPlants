@@ -1,11 +1,4 @@
-import {
-  View,
-  Button,
-  Text,
-  StyleSheet,
-  FlatList,
-  TouchableOpacity,
-} from "react-native";
+import { StyleSheet, FlatList } from "react-native";
 import React from "react";
 
 import CardPlant from "./CardPlant";

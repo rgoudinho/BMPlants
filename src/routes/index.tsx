@@ -2,8 +2,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
 
-import Login from "../pages/Login";
-import Register from "../pages/Register";
+import Login from "../pages/PageLogin";
+import Register from "../pages/PageRegister";
 import ScreenNames from "./EnumScreenNames";
 import LoggedInRoutes from "./LoggedInRoutes";
 

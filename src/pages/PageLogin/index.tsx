@@ -6,7 +6,7 @@ import LoginComponent from "../../components/Login";
 export default function Login({ navigation }: any) {
   return (
     <View>
-      <LoginComponent navigation={navigation} />
+      <LoginComponent />
     </View>
   );
 }

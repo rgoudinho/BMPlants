@@ -1,17 +1,21 @@
 import { View, Button, Text, StyleSheet, TextInput } from "react-native";
 import React from "react";
+import ScreenNames from "../../routes/EnumScreenNames";
+import { useNavigation } from "@react-navigation/native";
 
-export default function Form({ navigation }:any) {
+export default function Form() {
+  const navigation = useNavigation();
+
   const [tvEmail, octEmail] = React.useState("");
   const [tvPassword, octPassword] = React.useState("");
 
   const handleRegister = () => {
-    navigation.navigate("Register");
+    navigation.navigate(ScreenNames.Register);
   };
 
   const handleList = () => {
     //if (tvEmail === "teste@email" && tvPassword === "123")
-      navigation.navigate("RoutesTab");
+    navigation.navigate(ScreenNames.LoggedInRoutes);
   };
 
   return (
