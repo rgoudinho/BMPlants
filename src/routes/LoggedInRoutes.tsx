@@ -1,30 +1,17 @@
-import { View, Text, StyleSheet } from "react-native";
-import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import PageListPlants from "./pages/PageListPlants";
-import Profile from "./pages/Profile";
-import SearchPlantsDiseases from "./pages/SearchPlantsDiseases";
-import Plant from "./pages/Plant";
+import ScreenNames from "./enumScreenNames";
+
+//Pages
+import PageListPlants from "../pages/PageListPlants";
+import Plant from "../pages/Plant";
+import Profile from "../pages/Profile";
+import SearchPlantsDiseases from "../pages/SearchPlantsDiseases";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
-
-export enum ScreenNames {
-  List = "List",
-  PageListPlants = "PageListPlants",
-  Login = "Login",
-  Register = "Register",
-  RoutesTab = "RoutesTab",
-  Profile = "Profile",
-  Plant = "Plant",
-  Search = "Search",
-}
 
 function ListPlantStack() {
   return (
@@ -39,7 +26,7 @@ function ListPlantStack() {
   );
 }
 
-function RoutesTab() {
+function LoggedInRoutes() {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -71,23 +58,4 @@ function RoutesTab() {
   );
 }
 
-export default function Router() {
-  const userLogged = false;
-
-  if (userLogged)
-    return (
-      <NavigationContainer>
-        <RoutesTab />
-      </NavigationContainer>
-    );
-
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name={ScreenNames.Login} component={Login} />
-        <Stack.Screen name={ScreenNames.Register} component={Register} />
-        <Stack.Screen name={ScreenNames.RoutesTab} component={RoutesTab} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
+export default LoggedInRoutes;
