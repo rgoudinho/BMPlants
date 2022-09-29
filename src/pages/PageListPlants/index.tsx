@@ -5,7 +5,7 @@ import PlantsFlatlist from "../../components/PlantsFlatlist";
 export default function PageListPlants({ navigation }: any) {
   return (
     <View style={styles.container}>
-      <PlantsFlatlist navigation={navigation} />
+      <PlantsFlatlist />
     </View>
   );
 }

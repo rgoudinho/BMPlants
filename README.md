@@ -8,11 +8,11 @@ Entrando com uma doença, ira ser feito uma lista de plantas que podem ser usada
 AA1:
 
 - [x] Ideia do Projeto
-- [ ] Prototipo do projeto
-- [ ] Criação das telas do projeto
-- [ ] Implementação da navegação
-- [ ] Implementação da tela de login
-- [ ] Implementação da tela de Listagem de plantas
+- [x] Prototipo do projeto
+- [x] Criação das telas do projeto
+- [x] Implementação da navegação
+- [x] Implementação da tela de login
+- [x] Implementação da tela de Listagem de plantas
 
 AA2:
 
@@ -42,7 +42,7 @@ AA2:
 
 #### Cores usadas
 
-- #078E07 (cor principal)
-- #fbfbfb (cor secundaria)
-- #01d66a (cor tercearia)
+- #078E07 (borda do card)
+- #fbfbfb (cor do card)
+- #01d66a (cor de botões)
 - #010101 (texto padrão)
