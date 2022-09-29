@@ -42,7 +42,7 @@ AA2:
 
 #### Cores usadas
 
-- #00be01 (cor principal)
+- #078E07 (cor principal)
 - #fbfbfb (cor secundaria)
 - #01d66a (cor tercearia)
 - #010101 (texto padrão)

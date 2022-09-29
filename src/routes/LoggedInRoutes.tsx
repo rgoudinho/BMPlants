@@ -33,10 +33,10 @@ function LoggedInRoutes() {
         tabBarIcon: ({ focused, color, size }) => {
           let iconName: any;
 
-          if (route.name === "List") {
-            iconName = focused ? "clipboard-list" : "clipboard-list-outline";
-          } else if (route.name === "NewWork") {
-            iconName = focused ? "plus-circle" : "plus-circle-outline";
+          if (route.name === "PageListPlants") {
+            iconName = focused ? "view-list" : "view-list-outline";
+          } else if (route.name === "Search") {
+            iconName = focused ? "card-search" : "card-search-outline";
           } else if (route.name === "Profile") {
             iconName = focused ? "account-box" : "account-box-outline";
           }
