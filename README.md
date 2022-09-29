@@ -21,7 +21,7 @@ AA2:
 
 ### Link para o prototipo
 
-[www.google.com](www.google.com)
+[prototipo](https://www.figma.com/file/ejBHR58CBIKx9gpMH8MiIv/Untitled?node-id=0%3A1)
 
 ### Principais funcionalidades
 
