@@ -28,6 +28,16 @@ const data_plant: Array<InterfacePlant> = [
     img: "../../assets/images/plant/3.webp",
     problemsDealtWith: ["Insônia", "Febre", "Asma"],
   },
+
+  {
+    id: 4,
+    name: "Sálvia-comum",
+    scientificName: "Salvia officinalis",
+    description:
+      "Salvia officinalis é uma pequena planta perene subarbustiva, com caules lenhosos, folhas acinzentadas, e flores azuis a violáceas.",
+    img: "../../assets/images/plant/4.webp",
+    problemsDealtWith: ["Insônia", "Febre", "Asma"],
+  },
 ];
 
 export default data_plant;
