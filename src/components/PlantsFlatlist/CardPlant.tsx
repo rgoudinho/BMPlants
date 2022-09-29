@@ -15,17 +15,12 @@ export default function CardPlant({ item }: CardPlantProps) {
   };
 
   return (
-    <View>
-      <TouchableOpacity
-        style={styles.itemContainer}
-        onPress={() => handleClickPlant(item)}
-      >
-        <Text style={styles.movieTitle}>{item.name}</Text>
-
-        <View style={styles.movieFooter}>
-          <Text>{item.scientificName}</Text>
-          <Text>{item.description}</Text>
-        </View>
+    <View style={styles.itemContainer}>
+      <TouchableOpacity onPress={() => handleClickPlant(item)}>
+        <Text style={styles.plantTitle}>{item.name}</Text>
+        <Text style={styles.scientificName}>{item.scientificName}</Text>
+        <Text style={styles.description}>{item.description}</Text>
+        <View style={styles.movieFooter}></View>
       </TouchableOpacity>
     </View>
   );
@@ -33,16 +28,28 @@ export default function CardPlant({ item }: CardPlantProps) {
 
 const styles = StyleSheet.create({
   itemContainer: {
-    backgroundColor: "#ddd",
-    marginBottom: 8,
-    padding: 8,
+    borderColor: "#078E07",
+    borderWidth: 1,
+    borderRadius: 8,
+    backgroundColor: "#fbfbfb",
+    margin: 8,
+    marginVertical: 12,
   },
-  movieTitle: {
-    fontSize: 16,
+  plantTitle: {
+    fontSize: 20,
     fontWeight: "bold",
+    marginHorizontal: 10,
+    marginTop: 5,
   },
-  movieFooter: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+  scientificName: {
+    fontSize: 12,
+    font: "italic",
+    marginHorizontal: 10,
+  },
+  description: {
+    fontSize: 16,
+    fontWeight: "times",
+    margin: 10,
+    marginTop: 10,
   },
 });
