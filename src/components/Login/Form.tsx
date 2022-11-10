@@ -13,15 +13,11 @@ export default function Form() {
     navigation.navigate(ScreenNames.Register);
   };
 
-  const handleOk = () => {
-    console.log("OK Pressed");
-  };
-
   const handleList = () => {
     if (tvEmail === "teste" && tvPassword === "123") {
       navigation.navigate(ScreenNames.LoggedInRoutes);
     } else {
-      Alert.alert("Erro", "Usuário e/ou senha não encontrados", [
+      Alert.alert("Erro", "Usuário e/ou senha errados ou não encontrados", [
         {
           text: "Ok",
         },
