@@ -68,3 +68,9 @@ Link para app gerador de tunnel:
 - #fbfbfb (cor do card)
 - #01d66a (cor de botões)
 - #010101 (texto padrão)
+
+### Log de Alteração
+
+- Foi escolhida a persistência de dados usando uma API externa, usando o framework Rails e banco de dados SQLite, que já vem integrado ao Rails.
+
+- Foi removida a forma antiga de listagem de plantas, que era feita através de um arquivo ts, que guardava os dados e foi substituída pelos dados da que vem da API
