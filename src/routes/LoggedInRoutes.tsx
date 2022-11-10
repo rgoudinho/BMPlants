@@ -9,6 +9,7 @@ import PageListPlants from "../pages/PageListPlants";
 import Plant from "../pages/PagePlant";
 import Profile from "../pages/PageProfile";
 import SearchPlantsDiseases from "../pages/PageSearchPlantsDiseases";
+import { Button } from "react-native";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
