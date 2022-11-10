@@ -1,4 +1,4 @@
-import { View, Button, Text, StyleSheet, TextInput } from "react-native";
+import { View, Button, Text, StyleSheet, TextInput, Alert } from "react-native";
 import React from "react";
 import ScreenNames from "../../routes/EnumScreenNames";
 import { useNavigation } from "@react-navigation/native";
@@ -13,9 +13,20 @@ export default function Form() {
     navigation.navigate(ScreenNames.Register);
   };
 
+  const handleOk = () => {
+    console.log("OK Pressed");
+  };
+
   const handleList = () => {
-    //if (tvEmail === "teste@email" && tvPassword === "123")
-    navigation.navigate(ScreenNames.LoggedInRoutes);
+    if (tvEmail === "teste" && tvPassword === "123") {
+      navigation.navigate(ScreenNames.LoggedInRoutes);
+    } else {
+      Alert.alert("Erro", "Usuário e/ou senha não encontrados", [
+        {
+          text: "Ok",
+        },
+      ]);
+    }
   };
 
   return (
@@ -27,7 +38,7 @@ export default function Form() {
           style={styles.input}
           onChangeText={octEmail}
           value={tvEmail}
-          placeholder="E-mail: teste@email"
+          placeholder="Usuário: teste"
         />
       </View>
       <View>

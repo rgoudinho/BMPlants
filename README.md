@@ -18,18 +18,16 @@ AA2:
 
 - [x] Adição do banco de dados
 - [x] Conexão com API
-- [ ] Implementação de um alerta quando usuário não for encontrado
-- [ ] Escolha de recurso inédito
+- [x] Implementação de um alerta quando usuário não for encontrado
+- [x] Escolha de recurso inédito, Implementar login automatico com facebook/google e/ou implementar uso do I18n
 - [x] Carregar lista de plantas usando dados da API
 - [ ] Fazer Login usando a API
 
 Projeto:
 
-- [ ] Criptografar senha
 - [ ] Implementar tela da planta
 - [ ] Implementar perfil
 - [ ] Implementar busca de plantas por doenças
-- [ ] Implementar cadastro de Usuário
 - [ ] Implementar plantas favoritas
 - [ ] Implementar recurso inédito
 
