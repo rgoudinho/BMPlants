@@ -18,9 +18,8 @@ export default function CardPlant({ item }: CardPlantProps) {
     <View style={styles.itemContainer}>
       <TouchableOpacity onPress={() => handleClickPlant(item)}>
         <Text style={styles.plantTitle}>{item.name}</Text>
-        <Text style={styles.scientificName}>{item.scientificName}</Text>
+        <Text style={styles.scientificName}>{item.scientific_name}</Text>
         <Text style={styles.description}>{item.description}</Text>
-        <View style={styles.movieFooter}></View>
       </TouchableOpacity>
     </View>
   );
