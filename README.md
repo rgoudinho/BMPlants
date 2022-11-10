@@ -21,7 +21,7 @@ AA2:
 - [x] Implementação de um alerta quando usuário não for encontrado
 - [x] Escolha de recurso inédito, Implementar login automatico com facebook/google e/ou implementar uso do I18n
 - [x] Carregar lista de plantas usando dados da API
-- [ ] Fazer Login usando a API
+- [x] Fazer Login usando a API
 
 Projeto:
 
@@ -72,3 +72,5 @@ Link para app gerador de tunnel:
 - Foi escolhida a persistência de dados usando uma API externa, usando o framework Rails e banco de dados SQLite, que já vem integrado ao Rails.
 
 - Foi removida a forma antiga de listagem de plantas, que era feita através de um arquivo ts, que guardava os dados e foi substituída pelos dados da que vem da API
+
+- Adicionado autenticação de usuário utilizando API

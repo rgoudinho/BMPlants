@@ -1,27 +1,45 @@
+import axios from "axios";
 import { View, Button, Text, StyleSheet, TextInput, Alert } from "react-native";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ScreenNames from "../../routes/EnumScreenNames";
 import { useNavigation } from "@react-navigation/native";
 
 export default function Form() {
   const navigation = useNavigation();
 
-  const [tvEmail, octEmail] = React.useState("");
+  const [tvUser, octUser] = React.useState("");
   const [tvPassword, octPassword] = React.useState("");
 
   const handleRegister = () => {
     navigation.navigate(ScreenNames.Register);
   };
 
-  const handleList = () => {
-    if (tvEmail === "teste" && tvPassword === "123") {
-      navigation.navigate(ScreenNames.LoggedInRoutes);
-    } else {
-      Alert.alert("Erro", "Usuário e/ou senha errados ou não encontrados", [
+  const handleAlert = () => {
+    Alert.alert("Erro", "Usuário e/ou senha errados ou não encontrados", [
+      {
+        text: "Ok",
+      },
+    ]);
+  };
+
+  const handleCheckCredentials = async () => {
+    try {
+      const response = await axios.post(
+        "https://bmplants.loca.lt/users/log-in",
         {
-          text: "Ok",
-        },
-      ]);
+          user_name: tvUser,
+          password: tvPassword,
+        }
+      );
+      const { data } = response;
+      console.log(data);
+      if (data) {
+        navigation.navigate(ScreenNames.LoggedInRoutes);
+      } else {
+        handleAlert();
+      }
+    } catch (error) {
+      console.log(error);
     }
   };
 
@@ -32,8 +50,8 @@ export default function Form() {
         <TextInput
           autoCapitalize="none"
           style={styles.input}
-          onChangeText={octEmail}
-          value={tvEmail}
+          onChangeText={octUser}
+          value={tvUser}
           placeholder="Usuário: teste"
         />
       </View>
@@ -47,7 +65,7 @@ export default function Form() {
         />
       </View>
       <View style={styles.button}>
-        <Button title="Entrar" onPress={handleList} />
+        <Button title="Entrar" onPress={handleCheckCredentials} />
         <Text style={styles.text}>ou</Text>
         <Button title="Registre-se" onPress={handleRegister} />
       </View>
