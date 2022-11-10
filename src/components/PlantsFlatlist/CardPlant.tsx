@@ -1,17 +1,20 @@
 import { View, Button, Text, StyleSheet, TouchableOpacity } from "react-native";
-import React from "react";
+import React, { useContext } from "react";
 import InterfacePlant from "../../services/data/InterfacePlant";
 import { useNavigation } from "@react-navigation/native";
 import ScreenNames from "../../routes/EnumScreenNames";
+import { ModalContext } from "../AppModal";
+import PlantDetail from "../PlantDetail";
 
 interface CardPlantProps {
   item: InterfacePlant;
 }
 
 export default function CardPlant({ item }: CardPlantProps) {
-  const navigation = useNavigation();
+  const appModal = useContext(ModalContext);
+
   const handleClickPlant = (item: InterfacePlant) => {
-    navigation.navigate(ScreenNames.Plant, { item });
+    appModal.show(<PlantDetail />);
   };
 
   return (
@@ -47,7 +50,7 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 16,
-    fontWeight: "times",
+    fontWeigth: "times",
     margin: 10,
     marginTop: 10,
   },
