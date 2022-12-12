@@ -4,9 +4,7 @@ import React from "react";
 export default function SearchPlantsDiseases() {
   return (
     <View>
-      <Text>
-        
-      </Text>
+      <Text>Esta tela será desenvolvida no futuro, aguarde!</Text>
     </View>
   );
 }

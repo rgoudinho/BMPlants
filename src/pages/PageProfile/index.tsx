@@ -1,12 +1,13 @@
 import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 
-export default function Profile() {
+import Profile from "../../components/Profile";
+
+export default function ProfilePage() {
   return (
     <View>
-      <Text>
-        
-      </Text>
+      <Text>Mais coisas vão ser implementadas aqui, espere e verá!</Text>
+      <Profile></Profile>
     </View>
   );
 }
