@@ -1,8 +1,6 @@
 import { View, Button, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React, { useContext } from "react";
 import InterfacePlant from "../../services/data/InterfacePlant";
-import { useNavigation } from "@react-navigation/native";
-import ScreenNames from "../../routes/EnumScreenNames";
 import { ModalContext } from "../AppModal";
 import PlantDetail from "../PlantDetail";
 
@@ -14,7 +12,7 @@ export default function CardPlant({ item }: CardPlantProps) {
   const appModal = useContext(ModalContext);
 
   const handleClickPlant = (item: InterfacePlant) => {
-    appModal.show(<PlantDetail />);
+    appModal.show(<PlantDetail item={item} />);
   };
 
   return (
