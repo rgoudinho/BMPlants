@@ -6,6 +6,7 @@ import firebaseConfig from "./src/services/firebase/firebaseConfig";
 
 export default function App() {
   const firebaseApp = useFirebase(firebaseConfig);
+
   if (firebaseApp == null) {
     return <Text>carregando</Text>;
   }
