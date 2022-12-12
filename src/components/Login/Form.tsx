@@ -3,9 +3,11 @@ import { View, Button, Text, StyleSheet, TextInput, Alert } from "react-native";
 import React, { useEffect, useState } from "react";
 import ScreenNames from "../../routes/EnumScreenNames";
 import { useNavigation } from "@react-navigation/native";
+import useAuth from "../../hooks/useAuth";
 
 export default function Form() {
   const navigation = useNavigation();
+  const { login } = useAuth();
 
   const [tvUser, octUser] = React.useState("");
   const [tvPassword, octPassword] = React.useState("");
@@ -24,22 +26,25 @@ export default function Form() {
 
   const handleCheckCredentials = async () => {
     try {
-      const response = await axios.post(
-        "https://bmplants.loca.lt/users/log-in",
-        {
-          user_name: tvUser,
-          password: tvPassword,
-        }
-      );
-      const { data } = response;
-      console.log(data);
-      if (data) {
-        navigation.navigate(ScreenNames.LoggedInRoutes);
-      } else {
-        handleAlert();
-      }
+      await login(tvUser, tvPassword);
+      // const response = await axios.post(
+      //   "https://bmplants.loca.lt/users/log-in",
+      //   {
+      //     user_name: tvUser,
+      //     password: tvPassword,
+      //   }
+      // );
+      // const { data } = response;
+      // console.log(data);
+      // if (data) {
+      //   navigation.navigate(ScreenNames.LoggedInRoutes);
+      // } else {
+      //   handleAlert();
+      // }
     } catch (error) {
       console.log(error);
+
+      Alert.alert("Erro", "Falha de autenticação!");
     }
   };
 

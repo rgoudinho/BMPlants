@@ -1,6 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
+import useAuth from "../hooks/useAuth";
 
 import Login from "../pages/PageLogin";
 import Register from "../pages/PageRegister";
@@ -10,9 +11,9 @@ import LoggedInRoutes from "./LoggedInRoutes";
 const Stack = createNativeStackNavigator();
 
 export default function Router() {
-  const userLogged = false;
+  const { user } = useAuth();
 
-  if (userLogged)
+  if (user)
     return (
       <NavigationContainer>
         <LoggedInRoutes />
