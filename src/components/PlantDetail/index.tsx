@@ -18,26 +18,28 @@ export default function PlantDetail({ item }: PlantDetailsProps) {
   };
 
   return (
-    <View>
+    <View style={styles.itemContainer}>
       <Text style={styles.plantTitle}>{item.name}</Text>
       <Text style={styles.scientificName}>{item.scientific_name}</Text>
       <Text style={styles.description}>{item.description}</Text>
       <Image style={styles.image} source={{ uri: tempImage }}></Image>
-      <Button title="x" onPress={handleBack} />
+      <Button title="Sair" onPress={handleBack} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  image: {
-    width: 50,
-    height: 50,
+  itemContainer: {
+    flex: 1,
+    backgroundColor: "#fbfbfb",
+    margin: 8,
+    marginVertical: 12,
   },
   plantTitle: {
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: "bold",
-    marginHorizontal: 10,
-    marginTop: 5,
+    marginHorizontal: 8,
+    marginTop: 15,
   },
   scientificName: {
     fontSize: 12,
@@ -48,6 +50,12 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeigth: "times",
     margin: 10,
-    marginTop: 10,
+    marginTop: 30,
+  },
+  image: {
+    resizeMode: "cover",
+    margin: 50,
+    height: 300,
+    width: 200,
   },
 });
