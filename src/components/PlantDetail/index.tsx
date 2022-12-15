@@ -17,12 +17,16 @@ export default function PlantDetail({ item }: PlantDetailsProps) {
     appModal.hide();
   };
 
+  const image = "https://bmplants.loca.lt" + item.image;
+
+  console.log(image);
+
   return (
     <View style={styles.itemContainer}>
       <Text style={styles.plantTitle}>{item.name}</Text>
       <Text style={styles.scientificName}>{item.scientific_name}</Text>
       <Text style={styles.description}>{item.description}</Text>
-      <Image style={styles.image} source={{ uri: tempImage }}></Image>
+      <Image style={styles.image} source={{ uri: image }}></Image>
       <Button title="Sair" onPress={handleBack} />
     </View>
   );
