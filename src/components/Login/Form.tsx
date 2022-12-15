@@ -1,5 +1,13 @@
 import axios from "axios";
-import { View, Button, Text, StyleSheet, TextInput, Alert } from "react-native";
+import {
+  View,
+  Button,
+  Text,
+  StyleSheet,
+  TextInput,
+  Alert,
+  TouchableOpacity,
+} from "react-native";
 import React, { useEffect, useState } from "react";
 import ScreenNames from "../../routes/EnumScreenNames";
 import { useNavigation } from "@react-navigation/native";
@@ -72,7 +80,11 @@ export default function Form() {
       <View style={styles.button}>
         <Button title="Entrar" onPress={handleCheckCredentials} />
         <Text style={styles.text}>ou</Text>
-        <Button title="Registre-se" onPress={handleRegister} />
+        <Button title="Registre-se" onPress={handleRegister} disabled />
+
+        {/* <TouchableOpacity style={{ backgroundColor: "red" }}>
+          <Text>DEMO</Text>
+        </TouchableOpacity> */}
       </View>
     </View>
   );

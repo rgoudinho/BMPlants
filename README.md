@@ -49,9 +49,9 @@ Link para app gerador do tunnel:
 
 - Listar plantas medicinais
 - Encontrar plantas para tratar um problema de saúde
-- Indicar formas de usar uma planta medicinal
-- Favoritar planta
-- listar plantas favoritadas
+- Indicar formas de usar uma planta medicinal (futuro)
+- Favoritar planta (futuro)
+- listar plantas favoritadas (futuro)
 
 ### Telas
 
