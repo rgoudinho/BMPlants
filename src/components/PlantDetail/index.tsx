@@ -2,13 +2,16 @@ import { View, Text, StyleSheet, Button, Image } from "react-native";
 import React, { useContext } from "react";
 import { ModalContext } from "../AppModal";
 import InterfacePlant from "../../services/data/InterfacePlant";
+import { API_BASE_URL } from "../../services/axiosApi";
+
+import { styles } from "./styles";
 
 interface PlantDetailsProps {
   item: InterfacePlant;
 }
 
-const tempImage =
-  "https://lh6.googleusercontent.com/dPvLqnsumSbqlVxixyr8Vb1WQBvyFkl1WQMx5VVMSSnncR95PkpN7ELtYPbaCQzHWF2XlRDHGpjwXTQi7yR7DpkgUyaGuoyY5Xtxqd0PwmeuTm1_jgwr3p9kzPoBu8fZseClOEDr";
+const placeholderImage =
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png";
 
 export default function PlantDetail({ item }: PlantDetailsProps) {
   const appModal = useContext(ModalContext);
@@ -17,7 +20,7 @@ export default function PlantDetail({ item }: PlantDetailsProps) {
     appModal.hide();
   };
 
-  const image = "https://bmplants.loca.lt" + item.image;
+  const image = item.image ? API_BASE_URL + item.image : placeholderImage;
 
   console.log(image);
 
@@ -31,35 +34,3 @@ export default function PlantDetail({ item }: PlantDetailsProps) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  itemContainer: {
-    flex: 1,
-    backgroundColor: "#fbfbfb",
-    margin: 8,
-    marginVertical: 12,
-  },
-  plantTitle: {
-    fontSize: 30,
-    fontWeight: "bold",
-    marginHorizontal: 8,
-    marginTop: 15,
-  },
-  scientificName: {
-    fontSize: 12,
-    font: "italic",
-    marginHorizontal: 10,
-  },
-  description: {
-    fontSize: 16,
-    fontWeigth: "times",
-    margin: 10,
-    marginTop: 30,
-  },
-  image: {
-    resizeMode: "cover",
-    margin: 50,
-    height: 300,
-    width: 200,
-  },
-});
